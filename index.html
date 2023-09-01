@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <h1 class="center">Task Management System</h1>
+    </header>
+    <div class="hero">
+        <div class="functions center">
+            <label id="new"><a>New Task</a><img class="white_clr" src="Assets/add_icon.svg"></img></label>
+            <input type="text" id="searchBar" placeholder="Search task...">
+            <div id="searchBtn"><img class="white_clr" src="assets/search_icon.svg"></div>
+        </div>
+
+        <div id="popup_add" class="popup_add">
+            <form id="new_form" class="new_form" autocomplete="off" onsubmit="addTask()">
+                <div class="content">
+                    <div id="closePopup" class="close">&times;</div>
+                    <h2>Add Task</h2>
+                    <div id="formData">
+                        <label>Task Id : <input class="" placeholder="Id" type="text" name="" id="idInput">
+                        </label>
+                        <div class="msg" id="msg1"></div>
+                        <label>Task :<input class="" placeholder="Write a task..." type="text" name="" id="textInput">
+                        </label>
+                        <div class="msg" id="msg2"></div>
+                        <div class="dates">
+                            <label>Start Date
+                                <input type="datetime-local" name="" id="startDate">
+                            </label><br>
+                            <label>End Date
+                                <input type="datetime-local" name="" id="endDate">
+                            </label>
+                        </div>
+                        <label>Status
+                            <select name="status" id="status">
+                                <option value="In Progress" selected>In Progress</option>
+                                <option value="Completed">Completed</option>
+                                <option value="Due passed">DuePassed</option>
+                                <option value="Canceled">Canceled</option>
+                            </select>
+                        </label>
+                    </div>
+                    <div class="buttons">
+                        <button type="submit" id="add_btn">Add</button>
+                        <button type="click" id="cancel_btn">Cancel</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="text">
+            <h1>Task todo</h1>
+            <div class="postHeader">
+                <ul>
+                    <li>Id</li>
+                    <li>|</li>
+                    <li>Task Name</li>
+                    <li>|</li>
+                    <li>Begin From</li>
+                    <li>|</li>
+                    <li>Ending on</li>
+                    <li>|</li>
+                    <li>Status</li>
+                    <li>|</li>
+                    <li>Edit</li>
+                    <li>|</li>
+                    <li>Delete</li>
+                </ul>
+            </div>
+            <div id="posts">
+                <p>Id</p>
+                <p>Task Name</p>
+                <span>Started From</span>
+                <span>Due on</span>
+                <span id="status">Status</span>
+                <button id="subtask">Add Subtask</button>
+                <span class="options">
+                    <i class="white_clr" id="edit" onClick="editTask(this)" class="fas fa-edit"></i>
+                    <i class="white_clr" onClick="deleteTask(this);createTasks()" class="fas fa-trash-alt"></i>
+                </span>
+            </div>
+
+
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,285 @@
+@import url('https://fonts.googleapis.com/css2?family=Quintessential&family=Yantramanav:wght@300;400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.center {
+    margin: auto;
+    width: 50%;
+}
+
+header {
+    width: 100%;
+    height: 60px;
+    background: #109166;
+    text-align: center;
+    vertical-align: middle;
+}
+
+header h1 {
+    padding: 10px;
+    color: white;
+}
+
+.white_clr {
+    filter: brightness(0) invert(1);
+}
+
+.gray_clr {
+    filter: grayscale(1);
+}
+
+body {
+    font-family: 'Yantramanav';
+    background: #ebf3f0;
+}
+
+.hero {
+    width: 100%;
+    margin-top: 40px;
+}
+
+.container {
+    margin-top: 50px;
+    display: flex;
+    gap: 50px;
+}
+
+.functions {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+#formData{
+    margin: 5px;
+}
+
+#new {
+    width: 150px;
+    height: 40px;
+    background-color: #3ca381;
+    color: #e2eae7;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    padding: 10px;
+    gap: 20px;
+    border-radius: 2px;
+    margin-right: 50px;
+    font-size: large;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+#new:hover {
+    background: #0dd190;
+
+}
+
+#searchBar {
+    height: 40px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    display: flex;
+    align-items: center;
+    background: white;
+    border: #ebf3f0;
+}
+
+#searchBtn {
+    height: 40px;
+    background-color: #3ca381;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.popup_add {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+
+}
+
+.new_form {
+    width: fit-content;
+    height: fit-content;
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.close {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.new_form button {
+    display: inline;
+    width: 100px;
+    height: 40px;
+    cursor: pointer;
+    box-shadow: 0 5px 5px -5px;
+    transition: backgound 0.35s ease-in;
+    border-radius: 5px solid #3ca381;
+    border: none;
+    margin: 20px;
+    bottom: 20%;
+    right: 20%;
+}
+
+.new_form .content {
+    top: 50%;
+    bottom: 50%;
+    right: 50%;
+    left: 50%;
+}
+
+.new_form label {
+    font-size: 18px;
+    padding: 15px;
+}
+.new_form .buttons{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.new_form #add_btn {
+    background-color: #3ca381;
+    color: #e2eae7;
+}
+
+.new_form #cancel_btn {
+    background-color: #e2eae7;
+    color: #3f3d3d;
+}
+
+.new_form input {
+    width: 90%;
+    height: 30px;
+    border-radius: 2px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    margin-left: 20px;
+}
+
+
+.text h1 {
+    text-align: center;
+    margin: 30px;
+}
+
+text {
+    overflow-y: auto;
+}
+.postHeader{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    color: #3f3d3d;
+    background-color: #8de2c3;
+    border: 1.5px solid #109166;
+}
+.postHeader ul li{
+    display: inline-block;
+    margin: 15px;
+    text-align: center;
+}
+#posts {
+    width: 80%;
+    margin: 2px;
+    margin-left: 50px;
+}
+
+#posts div {
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    align-self: center;
+    margin-top: 2px;
+    color: #3f3d3d;
+    background-color: #8de2c3;
+    border: 1.5px solid #109166;
+    border-radius: 5px;
+    padding: 2px;
+    margin-left: 20px;
+}
+
+.buttons {
+    display: flex;
+}
+
+#edit {
+    cursor: pointer;
+
+}
+
+.options {
+    display: flex;
+    gap: 20px;
+}
+
+.dropdown {
+    display: inline-block;
+    position: relative;
+}
+
+#msg1,
+#msg2 {
+    color: red;
+    font-size: medium;
+    margin-left: 80px;
+}
+
+select, #subtask{
+    height: 30px;
+    background: #109166;
+    color: #e2eae7;
+    font-weight: 500;
+}
+select option{
+    background: #109166;
+    color: #e2eae7;
+}
+#status{
+    color: #e2eae7;
+    background: #109166;
+    text-align: center;
+    align-self: center;
+    padding: 5px;
+    font-weight: 500;
+    margin-left: 20px;
+    margin-top: 5px;
+}
+#subtask{
+    color: #e2eae7;
+    background: #109166;
+    text-align: center;
+    align-self: center;
+    padding: 5px;
+    font-weight: 500;
+    margin-left: 20px;
+    margin-top: 5px;
+}
